@@ -1,0 +1,94 @@
+{
+    "extends": [
+      "airbnb",
+      "airbnb-typescript",
+      "airbnb/hooks",
+      "plugin:@typescript-eslint/recommended",
+      "plugin:react-native/all"
+    ],
+    "parser": "@typescript-eslint/parser",
+    "parserOptions": {
+      "ecmaVersion": "latest",
+      "project": "./tsconfig.json",
+      "sourceType": "module"
+    },
+    "plugins": [
+      "@typescript-eslint",
+      "react",
+      "react-native"
+    ],
+    "rules": {
+      "import/extensions": [
+        "error",
+        {
+          "js": "never",
+          "json": "always",
+          "jsx": "never",
+          "ts": "never",
+          "tsx": "never"
+        }
+      ],
+      "import/newline-after-import": [
+        "error",
+        {
+          "count": 2
+        }
+      ],
+      "max-len": [
+        "error",
+        80
+      ],
+      "no-multiple-empty-lines": [
+        "error",
+        {
+          "max": 2,
+          "maxBOF": 0,
+          "maxEOF": 1
+        }
+      ],
+      "@typescript-eslint/no-use-before-define": [
+        "error",
+        {
+          "variables": false
+        }
+      ],
+      "quotes": [
+        "error",
+        "single"
+      ],
+      "react-native/no-color-literals": "off",
+      "react-native/no-raw-text": "off",
+      "react/jsx-curly-spacing": [
+        "error",
+        {
+          "children": {
+            "when": "always"
+          },
+          "when": "never"
+        }
+      ],
+      "react/jsx-filename-extension": [
+        "error",
+        {
+          "extensions": [
+            ".tsx"
+          ]
+        }
+      ],
+      "react/react-in-jsx-scope": "off",
+      "react/style-prop-object": "off"
+    },
+    "settings": {
+      "import/resolver": {
+        "node": {
+          "extensions": [
+            ".ts",
+            ".tsx"
+          ],
+          "paths": [
+            "src"
+          ]
+        }
+      }
+    }
+  }
